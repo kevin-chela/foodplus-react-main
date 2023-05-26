@@ -90,15 +90,16 @@ export function Header() {
    const [quantity, setQuantity] = useState(1)
 
   return (
-    <header className="fixed py-6 bg-light shadow-2xl">
+    <header className="fixed bg-light shadow-2xl" style={{padding: '20px'}}>
       <div className="mx-auto w-full max-w-6xl px-6 ">
         <div className="relative flex items-center justify-between">
           <h1 className="m-0 text-xl font-bold uppercase leading-none">
             <Link to="/" className="flex items-center no-underline">
-              <Logo className="mr-3" /> ManHattan Desert
+              <Logo className="mr-3" /> &nbsp; &nbsp; &nbsp;ManHattan Desert
             </Link>
           </h1>
-          <div className="d-flex justify-content-between">
+
+          <div className="d-flex justify-end mx-3">
 
           <Badge color="secondary" variant="dot" invisible={invisible} className="mt-3 mr-5" style={{marginRight: '50px'}} >
           <Tooltip title="Notifications">
@@ -131,7 +132,7 @@ export function Header() {
           </Menu>
 
           <div className='bg-info' style={{width: '50px', height: '50px', borderRadius: '8px',}} onClick={toggleShow}>
-          <MDBIcon fas icon="cart-arrow-down text-white mt-3 ml-3" style={{fontSize:20, cursor: 'pointer'}} />
+          <MDBIcon fas icon="cart-arrow-down text-white mt-3 ml-5" style={{fontSize:20, cursor: 'pointer', marginLeft: '12px'}} />
             <div className='amount-container'>
               <p className='total-amount'>{amount}</p>
             </div> 
@@ -247,9 +248,9 @@ export function Header() {
             </MDBModalDialog>
           </MDBModal>
       </div>
-      <div style={{position: 'fixed', marginTop: '30%', marginLeft: '3%', zIndex: '100'}}> 
+      <div style={{position: 'fixed', marginTop: '30%', marginLeft: '2%', zIndex: '100'}}> 
       <div className='bg-info' style={{width: '50px', height: '50px', borderRadius: '8px',}} onClick={toggleShow}>
-          <MDBIcon fas icon="cart-arrow-down text-white mt-3 ml-3" style={{fontSize:20, cursor: 'pointer'}} />
+          <MDBIcon fas icon="cart-arrow-down text-white mt-3 ml-3" style={{fontSize:20, cursor: 'pointer', marginLeft: '12px'}} />
             <div className='amount-container'>
               <p className='total-amount'>{amount}</p>
             </div> 
