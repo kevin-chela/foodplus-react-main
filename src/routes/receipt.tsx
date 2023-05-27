@@ -26,7 +26,7 @@ import {
   } from "mdb-react-ui-kit";
 
 import { Footer } from '../components/footer'
-import { Header } from '../components/header'
+import Header  from '../components/header'
 
 import { Page, Document} from 'react-pdf';
 

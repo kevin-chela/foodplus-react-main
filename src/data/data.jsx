@@ -6,6 +6,7 @@ const menu = [
     price: 15.99,
     img: '../assets/images/item-1.jpeg',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. `,
+    amount: 1,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const menu = [
     price: 13.99,
     img: '../assets/images/item-2.jpeg',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. `,
+    amount: 1,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const menu = [
     price: 6.99,
     img: '../assets/images/item-3.jpeg',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+    amount: 1,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const menu = [
     price: 20.99,
     img: '../assets/images/item-4.jpeg',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. `,
+    amount: 1,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const menu = [
     price: 22.99,
     img: '../assets/images/item-5.jpeg',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. `,
+    amount: 1,
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ const menu = [
     price: 18.99,
     img: '../assets/images/item-6.jpeg',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+    amount: 1,
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ const menu = [
     price: 8.99,
     img: '../assets/images/item-7.jpeg',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. `,
+    amount: 1,
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ const menu = [
     price: 12.99,
     img: '../assets/images/item-8.jpeg',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. `,
+    amount: 1,
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ const menu = [
     price: 16.99,
     img: '../assets/images/item-9.jpeg',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
-  },
+    amount: 1,
+  }
 ];
 export default menu;

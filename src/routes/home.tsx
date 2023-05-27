@@ -1,32 +1,14 @@
 //React
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import {
-  MDBBtn,
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCol,
+
   MDBContainer,
-  MDBIcon,
-  MDBInput,
-  MDBRow,
-  MDBTypography,
-
-  //Modal
-
-  MDBModal,
-  MDBModalDialog,
-  MDBModalContent,
-  MDBModalHeader,
-  MDBModalTitle,
-  MDBModalBody,
-  MDBModalFooter,
-
-  } from "mdb-react-ui-kit";
+ 
+} from "mdb-react-ui-kit";
 
 import { Footer } from '../components/footer'
-import { Header } from '../components/header'
+import Header  from '../components/header'
 
 import Menu from '../component/Menu';
 import Categories from '../component/Categories';
@@ -50,7 +32,7 @@ export default function HomePage() {
   return (
     <div>
 
-      <Header/>
+      <Header items={menuItems} />
      
       <MDBContainer className="" style={{zIndex: '100'}}>
         <div>

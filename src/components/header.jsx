@@ -16,11 +16,7 @@ import {
   MDBCard,
   MDBCardBody,
   MDBCardImage,
-  MDBCol,
-  MDBContainer,
   MDBIcon,
-  MDBInput,
-  MDBRow,
   MDBTypography,
 
   //Modal
@@ -45,7 +41,7 @@ import { useGlobalContext } from '../context/context'
 
 import empty from '../assets/images/empty.png'
 
-export function Header() {
+const Header = ({ items }) => {
 
   //Menu
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -70,24 +66,16 @@ export function Header() {
   const [centredModal, setCentredModal] = useState(false)
   const toggleShow = () => setCentredModal(!centredModal)
 
-  // const [amount, setAmount] = useState(1);
-
   const { 
     cart, 
     total, 
-    clearCart,
     remove,
-    increase, 
-    decrease, 
     toggleAmount, 
     amount, 
     
      } = useGlobalContext()
 
   console.log(cart);
-
-   //Input
-   const [quantity, setQuantity] = useState(1)
 
   return (
     <header className="fixed bg-light shadow-2xl" style={{padding: '20px'}}>
@@ -186,13 +174,17 @@ export function Header() {
                           </div>
                         </div>
                         <div className="d-flex flex-row align-items-center">
-                          <div>
-                          <MDBInput wrapperClass='mb-4' id='formControlLg' type='number' size="lg"
-                              style={{width: 70}}
-                              value={quantity} 
-                              onChange={(e) => setQuantity(e.target.value)}
-                          />
+                          <div className="number-input">
+
+                            <p id="numberDisplay">{item.amount}</p>
+
+                            <div style={{fontSize: '10px'}}>
+                              <div><button  onClick={() => toggleAmount(item.id, 'inc')}>▲</button></div>
+                              
+                              <div><button onClick={() => toggleAmount(item.id, 'dec')}>▼</button></div>
+                            </div>
                           </div>
+
                           <div style={{ width: "80px", marginLeft: "50px"  }}>
                             <MDBTypography tag="h5" className="mb-0">
                               {item.price}
@@ -234,8 +226,6 @@ export function Header() {
 
                 {cart.length > 0 ? 
 
-
-
                 <MDBModalFooter className="modal-footer">
 
                   <CheckOut 
@@ -258,4 +248,8 @@ export function Header() {
       </div>
     </header>
   )
-}
+};
+
+export default Header
+
+

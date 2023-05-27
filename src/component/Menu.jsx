@@ -7,7 +7,6 @@ import {
   MDBCardBody,
   MDBCardImage,
   MDBCol,
-  MDBInput,
   MDBRow,
   MDBTypography,
 
@@ -27,11 +26,8 @@ const Menu = ({ items }) => {
     toggleAmount, 
     cart, 
     total, 
-    amount, 
+    amount,
     addItem } = useGlobalContext()
-
-  //Input
-  const [quantity, setQuantity] = useState(1)
 
   const handleRowClick = (menuItem) => {
 
@@ -43,7 +39,7 @@ const Menu = ({ items }) => {
       title: menuItem.title,
       price: menuItem.price,
       description: menuItem.desc,
-      amount: 1,
+      amount: menuItem.amount,
       img: menuItem.img
 
    }
@@ -52,11 +48,10 @@ const Menu = ({ items }) => {
 
   }
 
-
   return (
     <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', alignItems: "space-around"}}>
       {items.map((menuItem) => {
-        const { id, title, img, desc, price } = menuItem;
+        const { id, title, img, desc, price, amount } = menuItem;
         return (
           
           <MDBCard className="mb-3 shadow-lg" key={id}  style={{width: '500px', height: '45%', marginLeft: '20px'}}>
@@ -84,12 +79,15 @@ const Menu = ({ items }) => {
             </div>
 
             <div className="d-flex justify-content-around mt-4">
-            <MDBInput wrapperClass='mb-4' id='formControlLg' type='number' size="lg"
-              onkeydown="handleArrowKeys(event)"
-                style={{width: 70}}
-                value={quantity} 
-                onChange={(e) => setQuantity(e.target.value)}
-            />
+            <div className="number-input">
+              
+              <p id="numberDisplay">{amount}</p>
+              <div style={{fontSize: '10px'}}>
+                <div><button onClick={() => toggleAmount(id, 'inc')}>▲</button></div>
+                
+                <div><button onClick={() => toggleAmount(id, 'dec')}>▼</button></div>
+              </div>
+            </div>
 
             <MDBBtn tag="h5" 
             className="mb-0 bg-info sm"
