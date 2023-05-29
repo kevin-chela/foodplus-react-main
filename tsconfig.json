@@ -19,6 +19,6 @@
     "target": "ESNext",
     "typeRoots": ["./node_modules/@types"]
   },
-  "include": ["**/*.ts", "**/*.tsx", "src/components/header.jsx"],
+  "include": ["**/*.ts", "**/*.tsx", "src/components/header.jsx", "src/routes/receipt.jsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
