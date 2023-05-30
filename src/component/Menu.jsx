@@ -82,7 +82,6 @@ const Menu = ({ items }) => {
             <div className="number-input">
               
               <p id="numberDisplay">{amount}</p>
-
               <div style={{fontSize: '10px'}}>
                 <div><button onClick={() => toggleAmount(id, 'inc')}>▲</button></div>
                 
